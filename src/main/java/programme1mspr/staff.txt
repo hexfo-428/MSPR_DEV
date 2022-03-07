@@ -1,0 +1,8 @@
+c;berthier;roubaix
+s;connor;Paris
+j;macclane;marseille
+a;foley;montpellier
+m;riggs;bordeaux
+j;west;rennes
+s;holmes;lyon
+j;rouletabille;Lille
