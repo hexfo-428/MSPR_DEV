@@ -16,6 +16,15 @@
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
+    
+<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
+<dependency>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.9.1.2184</version>
+    <type>pom</type>
+</dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
@@ -34,4 +43,27 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    
+    
+     <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url> http://localhost:9000 </sonar.host.url>
+                <sonar.projectKey>SONARQUBE1</sonar.projectKey>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>sonarqube</sonar.password>
+
+            </properties>
+        </profile>
+     </profiles>
+    
+    
+    
+    
+    
 </project>
