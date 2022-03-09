@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/hexfo-428/MSPR_DEV.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean test"
@@ -31,7 +31,7 @@ pipeline {
              stage('Buils') {
                 steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/hexfo-428/MSPR_DEV.git'
 
                 // Run Maven on a Unix agent.
                // sh "mvn -Dmaven.test.failure.ignore=true clean test"
