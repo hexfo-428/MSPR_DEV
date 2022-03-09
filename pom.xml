@@ -17,13 +17,13 @@
             <scope>test</scope>
         </dependency>
     
-<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
-<dependency>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.9.1.2184</version>
-    <type>pom</type>
-</dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
+            <type>pom</type>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -44,6 +44,34 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     
+    
+    
+    
+
+    <build>
+        <finalName>MSPR_JAVA</finalName>
+        <plugins>
+            <!-- Make this jar executable -->
+            <plugin>
+    
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                                
+                <configuration>
+                    <!-- DO NOT include log4j.properties file in your Jar -->
+
+                    <archive>
+                        <manifest>
+                            <!-- Jar file entry point -->
+                            <mainClass>programme1mspr.programmemspr</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
     
      
     
